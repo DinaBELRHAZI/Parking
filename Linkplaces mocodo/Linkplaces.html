@@ -1,0 +1,60 @@
+<html>
+<head>
+<meta charset='utf-8'>
+<style>
+  #mld .relation { font-variant: small-caps; font-weight: bold }
+  #mld .primary { text-decoration: underline }
+  #mld .foreign { font-style: oblique }
+  #mld .normal { }
+</style>
+</head>
+<body>
+<div id='mld'>
+<div>
+  <span class='relation'>USER</span> (
+    <span class='primary'>id_u</span>,
+    <span class='normal'>nom</span>,
+    <span class='normal'>prenom</span>,
+    <span class='normal'>email</span>,
+    <span class='normal'>password</span>,
+    <span class='normal'>Admin</span>
+  )
+</div>
+<div>
+  <span class='relation'>LINKPLACE</span> (
+    <span class='primary'>id_lp</span>,
+    <span class='normal'>id_p</span>,
+    <span class='normal'>id_u</span>,
+    <span class='normal'>datefin</span>,
+    <span class='foreign'>id_h</span>
+  )
+</div>
+<div>
+  <span class='relation'>PLACE</span> (
+    <span class='primary'>id_p</span>,
+    <span class='normal'>numeroplace</span>,
+    <span class='foreign'>id_lp</span>,
+    <span class='foreign'>id_u</span>,
+    <span class='foreign'>id_la</span>
+  )
+</div>
+<div>
+  <span class='relation'>LISTEATTENTE</span> (
+    <span class='primary'>id_la</span>,
+    <span class='normal'>id_u</span>,
+    <span class='normal'>placefileattente</span>,
+    <span class='normal'>datedemande</span>
+  )
+</div>
+<div>
+  <span class='relation'>HISTORIQUEPLACE</span> (
+    <span class='primary'>id_h</span>,
+    <span class='normal'>id_p</span>,
+    <span class='normal'>id_u</span>,
+    <span class='normal'>datedebut</span>,
+    <span class='normal'>datefin</span>
+  )
+</div>
+</div>
+</body>
+</html>
