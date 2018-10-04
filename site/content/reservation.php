@@ -1,7 +1,4 @@
-<h2> contenu du site </h2>
-
-<!-- Ecrire le contenu de la page d'acceuil içi-->
-
+<h1>Reservation</h1>
 <br/>
 <br/>
 Text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text <br/>
