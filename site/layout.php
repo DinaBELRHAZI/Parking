@@ -3,7 +3,11 @@
 <head>
 <title>Site parking</title>
  <!--Header-->
-  <h1> Header du site</h1>
+ 			<!-- Banniere -->
+   
+<img src="./Images/banniere.png" style="border:1px solid black;max-width:100%;">
+
+  <h1>  Header du site</h1>
   <!-- Ecrire tout le header içi-->
   
           <ul class="navbar-nav mr-auto">
