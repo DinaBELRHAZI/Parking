@@ -15,7 +15,7 @@
               <a class="nav-link" href="?p=accueil">Accueil</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="?p=reservation">Reservationn</a>
+              <a class="nav-link" href="?p=reservation">Reservation</a>
             </li>
             <li class="nav-item">
               <a class="nav-link disabled" href="?p=attente">Attente</a>
@@ -28,6 +28,9 @@
             </li>
             <li class="nav-item">
               <a class="nav-link disabled" href="?p=contact">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="?p=login">Connection / </a> <a class="nav-link disabled" href="?p=signup"> Inscription </a>
             </li>
           </ul>
  
