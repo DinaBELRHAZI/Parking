@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  ven. 21 sep. 2018 à 08:04
+-- Généré le :  ven. 12 oct. 2018 à 07:51
 -- Version du serveur :  5.7.21
--- Version de PHP :  5.6.35
+-- Version de PHP :  7.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -25,53 +25,6 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Structure de la table `historiqueplace`
---
-
-DROP TABLE IF EXISTS `historiqueplace`;
-CREATE TABLE IF NOT EXISTS `historiqueplace` (
-  `id_p` int(11) NOT NULL,
-  `id_u` int(11) NOT NULL,
-  `datedebut` int(11) NOT NULL,
-  `datefin` int(11) NOT NULL,
-  KEY `idp` (`id_p`),
-  KEY `idu` (`id_u`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Structure de la table `linkplace`
---
-
-DROP TABLE IF EXISTS `linkplace`;
-CREATE TABLE IF NOT EXISTS `linkplace` (
-  `id_lp` int(11) NOT NULL,
-  `id_p` int(11) NOT NULL,
-  `id_u` int(11) NOT NULL,
-  `expiration` int(11) NOT NULL,
-  KEY `iduser` (`id_u`),
-  KEY `idplace` (`id_p`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Structure de la table `listeattente`
---
-
-DROP TABLE IF EXISTS `listeattente`;
-CREATE TABLE IF NOT EXISTS `listeattente` (
-  `id_la` int(11) NOT NULL,
-  `id_u` int(11) NOT NULL,
-  `placefileattente` int(11) NOT NULL,
-  `datedemande` int(11) NOT NULL,
-  KEY `linkuser` (`id_u`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
 -- Structure de la table `place`
 --
 
@@ -85,17 +38,34 @@ CREATE TABLE IF NOT EXISTS `place` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `utilisateurs`
+-- Structure de la table `reserver`
 --
 
-DROP TABLE IF EXISTS `utilisateurs`;
-CREATE TABLE IF NOT EXISTS `utilisateurs` (
+DROP TABLE IF EXISTS `reserver`;
+CREATE TABLE IF NOT EXISTS `reserver` (
   `id_u` int(11) NOT NULL,
-  `Nom` varchar(30) NOT NULL,
-  `Prénom` varchar(30) NOT NULL,
-  `Email` varchar(30) NOT NULL,
-  `Password` varchar(30) NOT NULL,
-  `Admin` int(11) NOT NULL,
+  `id_p` int(11) NOT NULL,
+  `datefin` int(11) NOT NULL,
+  KEY `id_u` (`id_u`),
+  KEY `id_p` (`id_p`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `user`
+--
+
+DROP TABLE IF EXISTS `user`;
+CREATE TABLE IF NOT EXISTS `user` (
+  `id_u` int(11) NOT NULL AUTO_INCREMENT,
+  `nom` varchar(255) NOT NULL,
+  `prenom` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `level` int(11) NOT NULL,
+  `placefileattente` int(11) NOT NULL,
+  `historique` int(11) NOT NULL,
   PRIMARY KEY (`id_u`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -104,24 +74,11 @@ CREATE TABLE IF NOT EXISTS `utilisateurs` (
 --
 
 --
--- Contraintes pour la table `historiqueplace`
+-- Contraintes pour la table `reserver`
 --
-ALTER TABLE `historiqueplace`
-  ADD CONSTRAINT `idp` FOREIGN KEY (`id_p`) REFERENCES `place` (`id_p`),
-  ADD CONSTRAINT `idu` FOREIGN KEY (`id_u`) REFERENCES `utilisateurs` (`id_u`);
-
---
--- Contraintes pour la table `linkplace`
---
-ALTER TABLE `linkplace`
-  ADD CONSTRAINT `idplace` FOREIGN KEY (`id_p`) REFERENCES `place` (`id_p`),
-  ADD CONSTRAINT `iduser` FOREIGN KEY (`id_u`) REFERENCES `utilisateurs` (`id_u`);
-
---
--- Contraintes pour la table `listeattente`
---
-ALTER TABLE `listeattente`
-  ADD CONSTRAINT `linkuser` FOREIGN KEY (`id_u`) REFERENCES `utilisateurs` (`id_u`);
+ALTER TABLE `reserver`
+  ADD CONSTRAINT `id_p` FOREIGN KEY (`id_p`) REFERENCES `place` (`id_p`),
+  ADD CONSTRAINT `id_u` FOREIGN KEY (`id_u`) REFERENCES `user` (`id_u`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

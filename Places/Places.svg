@@ -1,0 +1,58 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg width="356" height="188" view_box="0 0 356 188"
+xmlns="http://www.w3.org/2000/svg"
+xmlns:link="http://www.w3.org/1999/xlink">\n\n<desc>Généré par Mocodo 2.3.7 le Fri, 12 Oct 2018 00:40:53</desc>
+
+<rect id="frame" x="0" y="0" width="356" height="188" fill="#f5f5f5" stroke="none" stroke-width="0"/>
+
+<!-- Association RESERVER -->
+<line x1="61" y1="94" x2="185" y2="94" stroke="#bf812d" stroke-width="2"/>
+<text x="118" y="111.0" fill="#01665e" font-family="Verdana" font-size="12">0,N</text>
+<line x1="302" y1="94" x2="185" y2="94" stroke="#bf812d" stroke-width="2"/>
+<text x="230" y="111.0" fill="#01665e" font-family="Verdana" font-size="12">0,N</text>
+<g id="association-RESERVER">
+	<path d="M 211 69 a 14 14 90 0 1 14 14 V 94 h -80 V 83 a 14 14 90 0 1 14 -14" fill="#dfc27d" stroke="#dfc27d" stroke-width="0"/>
+	<path d="M 225 94.0 v 11 a 14 14 90 0 1 -14 14 H 159 a 14 14 90 0 1 -14 -14 V 94.0 H 80" fill="#f6e8c3" stroke="#f6e8c3" stroke-width="0"/>
+	<rect x="145" y="69" width="80" height="50" fill="none" rx="14" stroke="#bf812d" stroke-width="2"/>
+	<line x1="145" y1="94" x2="225" y2="94" stroke="#bf812d" stroke-width="1"/>
+	<text x="152" y="86.7" fill="#000000" font-family="Verdana" font-size="12">RESERVER</text>
+	<text x="152" y="111.8" fill="#000000" font-family="Verdana" font-size="12">datefin</text>
+</g>
+
+<!-- Entity PLACE -->
+<g id="entity-PLACE">
+	<g id="frame-PLACE">
+		<rect x="257" y="60" width="90" height="25" fill="#80cdc1" stroke="#80cdc1" stroke-width="0"/>
+		<rect x="257" y="85.0" width="90" height="43" fill="#c7eae5" stroke="#c7eae5" stroke-width="0"/>
+		<rect x="257" y="60" width="90" height="68" fill="none" stroke="#35978f" stroke-width="2"/>
+		<line x1="257" y1="85" x2="347" y2="85" stroke="#35978f" stroke-width="1"/>
+	</g>
+	<text x="282" y="77.7" fill="#000000" font-family="Verdana" font-size="12">PLACE</text>
+	<text x="262" y="102.8" fill="#000000" font-family="Verdana" font-size="12">id_p</text>
+	<line x1="262" y1="105" x2="289" y2="105" stroke="#000000" stroke-width="1"/>
+	<text x="262" y="119.8" fill="#000000" font-family="Verdana" font-size="12">numeroplace</text>
+</g>
+
+<!-- Entity USER -->
+<g id="entity-USER">
+	<g id="frame-USER">
+		<rect x="9" y="9" width="104" height="25" fill="#80cdc1" stroke="#80cdc1" stroke-width="0"/>
+		<rect x="9" y="34.0" width="104" height="145" fill="#c7eae5" stroke="#c7eae5" stroke-width="0"/>
+		<rect x="9" y="9" width="104" height="170" fill="none" stroke="#35978f" stroke-width="2"/>
+		<line x1="9" y1="34" x2="113" y2="34" stroke="#35978f" stroke-width="1"/>
+	</g>
+	<text x="44" y="26.7" fill="#000000" font-family="Verdana" font-size="12">USER</text>
+	<text x="14" y="51.7" fill="#000000" font-family="Verdana" font-size="12">id_u</text>
+	<line x1="14" y1="54" x2="41" y2="54" stroke="#000000" stroke-width="1"/>
+	<text x="14" y="68.7" fill="#000000" font-family="Verdana" font-size="12">nom</text>
+	<text x="14" y="85.7" fill="#000000" font-family="Verdana" font-size="12">prenom</text>
+	<text x="14" y="102.8" fill="#000000" font-family="Verdana" font-size="12">email</text>
+	<text x="14" y="119.8" fill="#000000" font-family="Verdana" font-size="12">password</text>
+	<text x="14" y="136.8" fill="#000000" font-family="Verdana" font-size="12">level</text>
+	<text x="14" y="153.8" fill="#000000" font-family="Verdana" font-size="12">placefileattente</text>
+	<text x="14" y="170.8" fill="#000000" font-family="Verdana" font-size="12">historique</text>
+</g>
+</svg>

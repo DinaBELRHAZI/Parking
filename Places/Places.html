@@ -1,0 +1,40 @@
+<html>
+<head>
+<meta charset='utf-8'>
+<style>
+  #mld .relation { font-variant: small-caps; font-weight: bold }
+  #mld .primary { text-decoration: underline }
+  #mld .foreign { font-style: oblique }
+  #mld .normal { }
+</style>
+</head>
+<body>
+<div id='mld'>
+<div>
+  <span class='relation'>USER</span> (
+    <span class='primary'>id_u</span>,
+    <span class='normal'>nom</span>,
+    <span class='normal'>prenom</span>,
+    <span class='normal'>email</span>,
+    <span class='normal'>password</span>,
+    <span class='normal'>level</span>,
+    <span class='normal'>placefileattente</span>,
+    <span class='normal'>historique</span>
+  )
+</div>
+<div>
+  <span class='relation'>RESERVER</span> (
+    <span class='foreign primary'>id_u</span>,
+    <span class='foreign primary'>id_p</span>,
+    <span class='normal'>datefin</span>
+  )
+</div>
+<div>
+  <span class='relation'>PLACE</span> (
+    <span class='primary'>id_p</span>,
+    <span class='normal'>numeroplace</span>
+  )
+</div>
+</div>
+</body>
+</html>
