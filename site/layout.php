@@ -41,7 +41,25 @@
   <?= $content; ?>
   
   			<!-- footer -->
-	<h3> footer </h3>
+<h3> footer </h3>
+	<h4>Pages du site</h4>
+	<ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="?p=accueil">Accueil</a>
+        </li>
+        <li class="nav-item">
+         <a class="nav-link disabled" href="?p=modeemploi">Mode d'emploi</a>
+        </li>
+		<li class="nav-item">
+         <a class="nav-link disabled" href="?p=quisommenous">Qui somme nous?</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="?p=contact">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="?p=login">Connection / </a> <a class="nav-link disabled" href="?p=signup"> Inscription </a>
+        </li>
+    </ul>
 	  <!-- Ecrire tout le footer içi-->
 	  Copyrigth "Webmaster".
   </body>
