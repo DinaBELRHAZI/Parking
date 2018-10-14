@@ -64,6 +64,9 @@
 				
 			?>
 			<li>
+			  <a class="nav-link disabled" href="?p=moncompte">Mon Compte</a>
+			</li>
+			<li>
 			  <a class="nav-link disabled" href="?p=logout">Deconnexion</a>
 			</li>
 			<?php
@@ -102,9 +105,6 @@
         </li>
         <li>
           <a class="nav-link disabled" href="?p=contact">Contact</a>
-        </li>
-        <li>
-          <a class="nav-link disabled" href="?p=login">Connection / </a> <a class="nav-link disabled" href="?p=register"> Inscription </a>
         </li>
     </ul>
 	  <!-- Ecrire tout le footer içi-->

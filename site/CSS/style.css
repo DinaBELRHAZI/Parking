@@ -37,11 +37,14 @@ header {
 	padding: 4px 0;
 }
 
-/* header ul li a {
-	text-decoration: none;
-	color: black;
- */}
-
 footer {
 	border:2px solid black;
+	width: auto;
+	height: auto;
+}
+
+footer ul{
+	padding: 0px;
+	margin: 0px;
+	list-style-type: none;
 }

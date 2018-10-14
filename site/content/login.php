@@ -34,8 +34,9 @@
 						<input type="email" name="email" id="email"/><br />
 						<label for="mdp">Mdp:</label>
 						<input type="password" name="mdp" id="mdp"><br />
-						<input type="submit" name="submit"/>
-						<a href="register.php"> Pas encore inscrit ?</a>
+						<input type="submit" name="submit"/><br>
+						<a href="?p=register"> Pas encore inscrit ?</a><br>
+						<a href="?p=passoublier"> Mot de passe oublié?</a>
 					</form>
 
 					<label>Se souvenir de moi ?</label><input type="checkbox" name="souvenir" /><br />
