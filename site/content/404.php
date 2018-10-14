@@ -1,10 +1,6 @@
 <?php $title = "Erreur 404"; ?>
-<div class="container">
-    <div class="row mt-5">
-        <div class="col-12">
-            <div class="alert alert-danger text-center" role="alert">
-                Page introuvable <a href="/index.php" class="alert-link">Retour à l'accueil</a>.
-            </div>
-        </div>
-    </div>
-</div>
+
+<h1><FONT size="7" color="#ff0000"><b> ERREUR 404</b></font></h1>
+
+ Page introuvable <a href="?p=accueil" >Retour à l'accueil</a>.
+          
