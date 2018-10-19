@@ -1,7 +1,7 @@
 <?php
 try
 {
-$bdd = new PDO('mysql:host=localhost;dbname=parking', 'root', '');
+$bdd = new PDO('mysql:host=localhost;dbname=parking', 'root', 'root');
 }
 catch (Exception $e)
 {
