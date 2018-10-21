@@ -18,8 +18,8 @@
 				<div class="login">
 					<?php    if(isset($_POST['submit'])) // Verifie si le compte utilisateur existe
 					{
-							$email = $_POST['email'];
-							$mdp = sha1($_POST['mdp']);
+							$email = htmlentities($_POST['email']);
+							$mdp = sha1(htmlentities($_POST['mdp']));
 
 							//echo "SELECT * FROM users WHERE email = '".$email."' AND mdp = '".$mdp."'";
 
@@ -35,7 +35,7 @@
 							}
 							else // si il n'existe pas affiche :
 							{
-								echo "Mauvais identifiants";
+								echo "<div class='alert alert-danger' role='alert'>Mauvais identifiants</div>";
 							}
 					}
 					?>
