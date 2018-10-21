@@ -1,16 +1,20 @@
 <?php $title = "Mon Compte" ; ?>
 
+<head>
+<link rel="stylesheet" type="text/css" href="./CSS/style.css" media="all"/>
+
+</head>
+
 <h1>Mon Compte</h1>
 
 <p>Bienvenue dans le pannel d'utilisateur<br>
-<FONT size="4" color="#ff0000"><b> EN CONSTRUCTION</b></font><br>
-Malheureusement il n'est pas encore au point (ou même coder encore) revient plus tard ! <br> </p>
+<FONT size="4" color="#ff0000"><b> EN CONSTRUCTION</b></font><br></p>
 
 <?php
 
 /*Modifier*/
 
-if((isset($_GET['action']) AND $_GET['action'] == 'modify')){
+
      if(isset($_POST['submit'])){
 
     $nom = htmlentities(trim($_POST['nom']));
@@ -29,11 +33,11 @@ if((isset($_GET['action']) AND $_GET['action'] == 'modify')){
 
                  $resultat = mysqli_query($db, $sql);
                 if($resultat){
-                    header("Location:index.php?action=modifyanddelete");//redirection
+                    header("Location:index.php?action=?p=accueil");//redirection
                 }
                 else echo "Echec de mise à jour";
     }
-}
+
 else  {
         $id = $_GET['id_u'];
         $select = mysqli_query($db,"SELECT * FROM biens WHERE id_u = ".$id);
@@ -46,32 +50,57 @@ else  {
 
           <form method="post" action="#" enctype="multipart/form-data">
 
-              <label for="prenom">Prenom :</label>
-              <input type="text" name="prenom" value="<?php echo $reponse['prenom']; ?>" required />
 
-               <label for="email">Type de bien :</label>
-               <select Type="email" name="email" id="email" value="<?php echo $reponse['email']; ?>" required>
-              </select>
+            <div class='form-row'>
+              <div class='form-group col-md-6'>
+                <label for='inputnom'>Votre nom : </label>
+                <input type="text" name="nom" id="nom" maxlength="50" value="<?php echo $reponse['nom']; ?>" required />
+              </div>
+            </div>
 
+            <div class='form-row'>
+              <div class='form-group col-md-6'>
+                <label for='prenom'>Prenom : </label>
+                <input type="text" name="prenom" id="prenom" maxlength="50" value="<?php echo $reponse['prenom']; ?>" required />
+              </div>
+            </div>
 
-              <label for="surface">Surface :</label>
-              <input type="range" name="surface" id="surface" max="100" value="<?php echo $reponse['surface']; ?>" required /><br/><br/>
+            <div class='form-row'>
+              <div class='form-group col-md-6'>
+                <label for='email'>Email : </label>
+                <input type="text" name="email" id="email" value="<?php echo $reponse['email']; ?>" required />
+              </div>
+            </div>
 
-              <label for="nom">Adr 1:</label>
-              <input type="text" name="nom" id="nom" maxlength="50" value="<?php echo $reponse['nom']; ?>" required />
+            <div class='form-row'>
+              <div class='form-group col-md-6'>
+                <label for='password'>Mot de passe : </label>
+                <input type="password" name="password" id="password" value="<?php echo $reponse['password']; ?>" required />
+              </div>
+            </div>
 
-              <label for="lvl">Adr 2:</label>
-              <input type="text" name="lvl" id="lvl" value="<?php echo $reponse['lvl']; ?>" maxlength="50" />
+            <div class='form-row'>
+              <div class='form-group col-md-6'>
+                <label for="lvl">Level : </label>
+                <input type="text" name="lvl" id="lvl" value="<?php echo $reponse['lvl']; ?>" required />
+              </div>
+            </div>
 
-              <label for="placefileattente">placefileattente :</label>
-              <input type="int" name="placefileattente" id="placefileattente" maxlength="10" value="<?php echo $reponse['placefileattente']; ?>" required /><br/><br/>
+            <div class='form-row'>
+              <div class='form-group col-md-6'>
+                <label for="placefileattente">Place dans la file d'attente : </label>
+                <input type="number" name="placefileattente" id="placefileattente" value="<?php echo $reponse['placefileattente']; ?>" required />
+              </div>
+            </div>
 
-              <label for="historique" >historique : </label>
-              <input type="text" name="historique" id="historique" placeholder="ex: Paris" maxlength="50" value="<?php echo $reponse['historique']; ?>" required />
+            <div class='form-row'>
+              <div class='form-group col-md-6'>
+                <label for="historique">Historique: </label>
+                <input type="number" name="historique" id="historique" value="<?php echo $reponse['historique']; ?>" required />
+              </div>
+            </div>
 
-
-
-              <input type="submit" name="submit" value="Envoyer"/>
+            <input type="submit" name="submit" value="Envoyer"/>
           </form>
 
 

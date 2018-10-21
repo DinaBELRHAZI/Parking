@@ -25,11 +25,11 @@
 
 					if(isset($_POST['EnvoyerDonnee']))
 					{
-						$Mdp = sha1($_POST['Mdp']);
-						$Email = $_POST['Email'];
-						$Nom = $_POST['Nom'];
-						$Prenom = $_POST['Prenom'];
-						$EnvoyerDonnee = $_POST['EnvoyerDonnee'];
+						$Mdp = sha1(htmlentities(trim($_POST['Mdp'])));
+						$Email = htmlentities(trim($_POST['Email']));
+						$Nom = htmlentities(trim($_POST['Nom']));
+						$Prenom = htmlentities(trim($_POST['Prenom']));
+						$EnvoyerDonnee = htmlentities(trim($_POST['EnvoyerDonnee']));
 
 						//echo "INSERT INTO users (nom,prenom,password,email) VALUES ('".$Nom."','".$Prenom."','".$Mdp."','".$Email."')"; //test requete sql
 							 $sql = "SELECT 1 FROM user WHERE email='$Email'";

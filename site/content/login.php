@@ -18,8 +18,8 @@
 				<div class="login">
 					<?php    if(isset($_POST['submit'])) // Verifie si le compte utilisateur existe
 					{
-							$email = htmlentities($_POST['email']);
-							$mdp = sha1(htmlentities($_POST['mdp']));
+							$email = htmlentities(trim($_POST['email']));
+							$mdp = sha1(htmlentities(trim($_POST['mdp'])));
 
 							//echo "SELECT * FROM users WHERE email = '".$email."' AND mdp = '".$mdp."'";
 

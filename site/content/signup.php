@@ -16,10 +16,10 @@
 <?php
     if(isset($_POST['submit']))
     {
-        $nom = $_POST['nom'];
-        $prenom = $_POST['prenom'];
-        $mdp = sha1($_POST['mdp']);
-        $email = $_POST['email'];
+        $nom = htmlentities(trim($_POST['nom']));
+        $prenom = htmlentities(trim($_POST['prenom']));
+        $mdp = sha1(htmlentities(trim($_POST['mdp'])));
+        $email = htmlentities(trim($_POST['email']));
 
 		//echo "INSERT INTO user (nom,prenom,mdp,email) VALUES ('$nom','$prenom','$mdp','$email')"; //test requete sql
 
