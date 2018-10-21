@@ -5,7 +5,7 @@
 <!-- Ecrire le contenu de la page d'acceuil içi-->
 
 
-<?php 
+<?php
 				if(isset ($_SESSION ['connecte']))	// Si l'utilisateur est connecté affiche :
 				{
 				$id_u = $_SESSION['id_u'];
@@ -25,7 +25,7 @@
 
 <br/>
 <br/>
-Bienvenue sur le site de gestion du parking de l'entreprise.<br>
+Bienvenue sur le site de gestion de parking de l'entreprise.<br>
 Veuillez vous inscrire et attendre que l'administrateur valide votre compte afin de pouvoir reserver une place.<br>";
 				}
 ?>
