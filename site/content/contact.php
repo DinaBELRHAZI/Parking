@@ -1,6 +1,6 @@
 <?php $title = "Contact" ; ?>
 
-<h1>contact</h1>
+<h1><u>Contact</u></h1>
 <br/>
 
 E-mail : webmaster@site.com <br>

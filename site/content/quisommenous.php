@@ -1,6 +1,6 @@
 <?php $title = "Qui somme nous?" ; ?>
 
-<h1>Qui somme nous ?</h1>
+<h1><u>Qui somme nous ? </u></h1>
 <br/>
 
 Description de l'entreprise.<br>

@@ -1,6 +1,6 @@
 <?php $title = "Accueil" ; ?>
 
-<h1> Accueil </h1>
+<h1> <u>Accueil</u> </h1>
 
 <!-- Ecrire le contenu de la page d'acceuil içi-->
 
@@ -17,15 +17,15 @@
 				//print_r($email);
 				echo "Bienvenue ", $nom," ", $prenom ," !<br>";
 				echo "Pour reserver une place rendez vous <a href='?p=reservation'>içi</a>.<br>";
-				echo "Pour voir votre place dans la file d'attente rendez vous <a href='?p=attente'>içi</a>.<br>";
+				echo "Pour voir votre place dans la file d'attente rendez vous <a href='?p=attente'>içi</a>.<br><br><br><br><br><br><br><br>";
 				}
 				else // sinon il affiche :
 				{
 				echo"
 
 <br/>
-<br/>
+
 Bienvenue sur le site de gestion de parking de l'entreprise.<br>
-Veuillez vous inscrire et attendre que l'administrateur valide votre compte afin de pouvoir reserver une place.<br>";
+Veuillez vous inscrire et attendre que l'administrateur valide votre compte afin de pouvoir reserver une place.<br><br><br><br><br><br><br><br>";
 				}
 ?>
