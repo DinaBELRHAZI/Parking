@@ -3,7 +3,7 @@
 <h1>Reservation</h1>
 <br/>
 <br/>
-Afin de reserver une place,veuillez remplir le formulaire suivant. Une place vous seras attribuer (si disponible) sinon vous oserez mit en file d'attente.<br>
+Afin de reserver une place,veuillez remplir le formulaire suivant. Une place vous seras attribuer (si disponible) sinon vous serez mit en file d'attente.<br>
 
 <?php 
 
