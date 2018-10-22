@@ -3,7 +3,7 @@
 <h1>Reservation</h1>
 <br/>
 <br/>
-Afin de reserver une place,veuillez remplir le formulaire suivant. Une place vous seras attribuer (si une place est disponible) sinon vous obtiendrez votre place en file d'attente.<br>
+Afin de reserver une place,veuillez remplir le formulaire suivant. Une place vous seras attribuer (si disponible) sinon vous oserez mit en file d'attente.<br>
 
 <?php 
 
@@ -31,7 +31,7 @@ Afin de reserver une place,veuillez remplir le formulaire suivant. Une place vou
 		</form>
 		
 	<?php	
-				if(isset($_POST['oui'])) // si l'utilisateur coche oui, ajoute l'utilisateur a la derniere place 
+				if(isset($_POST['oui'])) // si l'utilisateur coche oui, l'utlisateur sera ajouté a la derniere place 
 				{
 					$requete = $bdd->query("SELECT MAX(placefileattente) FROM user"); // recherche dans la bdd le place du dernier utilisateur en liste d'attente
 					$attente = $requete->fetch();
@@ -51,7 +51,7 @@ Afin de reserver une place,veuillez remplir le formulaire suivant. Une place vou
 		else // si l'utilisateur est deja en file d'attente affiche :
 		{
 			echo "Vous avez déjà reserver une place.<br>
-				Pour voir votre place rendez vous <a href='?p=attente'>içi</a> ."; //
+				Pour voir votre place rendez vous <a href='?p=attente'>içi</a> ."; 
 		}  
 		
 ?>
