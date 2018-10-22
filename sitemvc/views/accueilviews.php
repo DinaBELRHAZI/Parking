@@ -1,3 +1,4 @@
+<?php $title = "Accueil" ; ?>
 <?php
 
     if(isset ($_SESSION ['connecte']) && $_SESSION ['connecte'])

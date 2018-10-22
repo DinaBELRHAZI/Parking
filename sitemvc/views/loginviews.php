@@ -1,3 +1,4 @@
+<?php $title = "Login" ; ?>
 <?php
 require dirname(__FILE__).'/../controllers/logincontrollers.php';
 ?>

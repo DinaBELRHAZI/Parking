@@ -1,3 +1,4 @@
+<?php $title = "Reservation" ; ?>
 <?php
 require dirname(__FILE__).'/../controllers/reservationcontrollers.php';
 
@@ -22,7 +23,7 @@ if(isset ($_SESSION ['connecte']) && $_SESSION ['connecte'])
       else // si l'utilisateur est deja en file d'attente affiche :
       {
         echo "Vous avez déjà reserver une place.<br>
-          Pour voir votre place rendez vous <a href='?p=attente'>içi</a> .";
+          Pour voir votre place en file d'attente rendez vous <a href='?p=attente'>içi</a> .";
       }
   }
 ?>

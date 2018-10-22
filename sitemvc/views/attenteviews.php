@@ -1,3 +1,4 @@
+<?php $title = "Attente" ; ?>
 <?php
 require dirname(__FILE__).'/../controllers/attentecontrollers.php';
 ?>

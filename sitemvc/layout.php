@@ -7,7 +7,7 @@
 <link rel="stylesheet" type="text/css" href="views/CSS/style.css" media="all"/>
 </head>
 <header>
-<title>Site parking</title>
+<title><?php echo $title;?></title>
  <!--Header-->
  			<!-- Banniere -->
 
@@ -97,7 +97,7 @@
   			<!-- footer -->
 <h3> footer </h3>
 	<h4>Pages du site</h4>
-	<ul class="basdepage">
+	<ul id="menufooter">
         <li>
           <a class="nav-link" href="?p=accueil">Accueil</a>
         </li>

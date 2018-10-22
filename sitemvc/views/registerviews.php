@@ -1,3 +1,4 @@
+<?php $title = "Register" ; ?>
 <h1>Inscription</h1>
 
 <?php
