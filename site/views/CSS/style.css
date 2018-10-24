@@ -1,0 +1,84 @@
+body {
+	background-color: grey;
+	color: #000;
+	font-family: "Century Gothic", helvetica, arial, sans-serif;
+	line-height: 1.5;
+}
+
+/* header */
+
+
+header {
+	font-size: 1.2em;
+	border:2px solid black;
+	background-image: url(../Images/image-2.jpg);
+	height: 330px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#menuheader ul{
+	list-style-type: none;
+
+}
+
+#menuheader li {
+	border: 2px solid yellow;
+	text-align: center;
+	display: inline-block;
+	margin-top: 14%;
+}
+#menuheader li:hover{
+	font-size: 1.5em;
+	transition: 1.2s;
+	opacity: 0.5;
+}
+
+#menuheader li a {
+	display: inline-block;
+	text-decoration: none;
+	color: yellow;
+	padding: 4px 0;
+}
+
+footer {
+	/* border:2px solid black; */
+	background-color: black;
+	opacity: 0.5;
+	width: auto;
+	height: 20%;
+	text-decoration: none;
+	text-decoration-color: none;
+	text-decoration-line: none;
+	font-size: 1.1em;
+
+}
+
+footer ul{
+	text-align: center;
+}
+
+footer ul li{
+	list-style-type: none;
+	color: white;
+
+}
+
+footer ul li:hover{
+	color: 	#F8F8FF;
+	transition: 1s;
+}
+
+/*  register.php*/
+center .form-control{
+	margin-left: 30%;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+td, th {
+   border: 1px solid black;
+}
