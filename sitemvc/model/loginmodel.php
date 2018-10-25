@@ -1,5 +1,6 @@
 <?php
-
+// identifiants : admin@admin.//
+// mdp : admin
 require ("model.php");
 
 function getUserIFExists()
