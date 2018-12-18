@@ -1,25 +1,33 @@
-<?php require("include/function.php"); ?>
-<?php session_start (); ?>
 <?php
-		if(!isset($_GET['p']))
+global $isDebug;
+$isDebug = false;
+
+require "./attributionplace.php";
+
+require "./debug.php";
+
+session_start ();
+
+	if(!isset($_GET['p']))
+	{
+		$page = "accueil" ;
+		
+	}
+	else
+	{
+		if(!file_exists("views/".$_GET['p']."views.php")){
+
+		$page = "404";
+		}
+		else
 		{
-			$page = "accueil" ;
-			
+		$page = $_GET['p'];
 		}
-		else {
-			if(!file_exists("content/".$_GET['p'].".php"))
-			$page = "404";
-			
-			else
-			
-			$page = $_GET['p'];
+	}
 
-		}
-
-		ob_start();
-		include "content/".$page.".php" ;
-		$content = ob_get_contents();
-		ob_end_clean();
-		include "layout.php";
-
+	ob_start();
+	include "./views/".$page."views.php" ;
+	$content = ob_get_contents();
+	ob_end_clean();
+	include "layout.php";
 ?>
